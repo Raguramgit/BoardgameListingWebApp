@@ -33,6 +33,7 @@ jobs:
 
     name: Test cases
     runs-on: ubuntu-latest
+    needs: compile
 
     steps:
     - uses: actions/checkout@v4
@@ -49,6 +50,7 @@ jobs:
 
     name: Package
     runs-on: ubuntu-latest
+    needs: test
 
     steps:
     - uses: actions/checkout@v4
